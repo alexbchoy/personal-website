@@ -1,53 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
-  <link rel="icon" type="image/x-icon" href="icon.png">
-  <link rel="stylesheet" href="stylesheet.css">
-</head>
-<body>
-  <div class="body">
-    <div class="sidebar">
-      <div class="name-header-container">
-        <div class="name-header">
-          Alex Choy
-        </div>
-      </div>
-      <div class="nav-btn-container">
-        <a href="home.html" style="color: white;">Home</a>
-        <br>
-        <a href="https://alexio-games.itch.io/" target="_blank" style="color: white;">Games</a>
-        <br>
-        <a href="faq.html" style="color: white;">FAQ</a>
-      </div>
-    </div>
-    <div class=content> 
-      <div class="content-header-container">
-        <div class="content-header">Hi! I'm Alex!</div>
-      </div>
-      <div class="content-btn-container">
-        <div class="content-btn">
-          <div class="btn">
-              <a href="https://alexio-games.itch.io/" target="_blank">My Projects</a>
-          </div>
-        </div>
-        <div class="content-btn">
-          <div class="btn">
-            <a href="mailto:alexbchoy@gmail.com">Contact Me</a>
-          </div>
-        </div>
-      </div>
-      <div class="content-timeline-container">
-        <ul class="timeline">
-          <li data-year="2015" data-text="Released my first ever game on Scratch."></li>
-          <li data-year="2021" data-text="Launched my first Unity game, Off The Walls."></li>
-          <li data-year="2022" data-text="Won my first game jam."></li>
-          <li data-year="2024" data-text="Released my first ever commercial game."></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+        <link rel="stylesheet" href="./global.css" />
+        <link rel="stylesheet" href="./index.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Jua:wght@400&display=swap"
+        />
+        <script src="./request.js"></script> <!-- Added this line -->
+    </head>
+    <body>
+        <div class="screen-view">
+            <footer class="info-box-parent">
+                <div class="info-box"></div>
+                <div class="frame-parent">
+                    <div class="title-box-parent">
+                        <div class="title-box"></div>
+                        <div class="product-name" id = "product-name">-</div>
+                    </div>
+                    <div class="frame-group">
+                        <div class="price-box-parent">
+                            <div class="price-box"></div>
+                            <div class="frame-wrapper">
+                                <div class="discount-shadow-parent">
+                                    <div class="discount-shadow"></div>
+                                    <div class="discount-box-parent">
+                                        <div class="discount-box"></div>
+                                        <div class="link-label" id = "discount">-</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-wrapper">
+                                <div class="price" id = "price">-</div>
+                            </div>
+                        </div>
+                        <div class="rating-box-parent">
+                            <div class="rating-box"></div>
+                            <div class="rating" id = "rating">-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-frame">
+                    <img src="https://policyviz.com/wp-content/uploads/2020/12/amazon-logo-square.jpg" alt="Image" style="width: 275px; height: 275px;" id="image-frame">
+                </div>
+            </footer>
+            <section class="inner-container">
+                <div contentEditable="true" class="seach-bar"></div>
+                <input
+                    class="inner-container-child"
+                    placeholder="Enter Amazon URL Here..."
+                    type="text"
+                    id="amazonUrlInput"
+                >
+
+                <div class="search-button-parent">
+                    <div class="mag-glass-stem-parent" onclick="pullAsin()">
+                        <div class="mag-glass-stem"></div>
+                        <div class="mag-glass-parent">
+                            <div class="mag-glass"></div>
+                            <div class="mag-glass-white"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
